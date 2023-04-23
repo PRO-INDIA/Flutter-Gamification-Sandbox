@@ -6,6 +6,7 @@ class DetailsCard extends StatelessWidget {
   const DetailsCard({super.key});
 
   @override
+  
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
