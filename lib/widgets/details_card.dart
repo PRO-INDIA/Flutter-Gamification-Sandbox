@@ -6,7 +6,6 @@ class DetailsCard extends StatelessWidget {
   const DetailsCard({super.key});
 
   @override
-  
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
@@ -119,12 +118,7 @@ class DetailsCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(40),
                       ),
                     ),
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => RateReview()),
-                      // );
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Search',
                       style: TextStyle(

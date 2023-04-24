@@ -178,7 +178,6 @@ class _RateReviewState extends State<RateReview> {
                                                     const EdgeInsets.all(18.0),
                                                 child: ElevatedButton(
                                                   onPressed: () {
-                                                  
                                                     showDialog(
                                                       context: context,
                                                       builder: (BuildContext
@@ -191,48 +190,76 @@ class _RateReviewState extends State<RateReview> {
                                                             title: Text(
                                                                 "Glad you Like it"),
                                                             content: Container(
-                                                              width: 50,
-                                                              height: 50,
-                                                              child: Card(
-                                                                child: Column(
-                                                                  children: [
-                                                                    Text(
-                                                                        "Points"),
-                                                                    Text("20"),
-                                                                    ConfettiWidget(
-                                                                        confettiController:
-                                                                            _controllerBottomCenter,
-                                                                        blastDirection:
-                                                                            -pi /
-                                                                                2,
-                                                                        emissionFrequency:
-                                                                            0.01,
-                                                                        numberOfParticles:
-                                                                            80,
-                                                                        maxBlastForce:
-                                                                            100,
-                                                                        minBlastForce:
-                                                                            80,
-                                                                        shouldLoop:
-                                                                            false,
-                                                                        blastDirectionality:
-                                                                            BlastDirectionality
-                                                                                .explosive,
-                                                                        gravity:
-                                                                            0.3),
-                                                                  ],
-                                                                ),
+                                                              child: Row(
+                                                                children: [
+                                                                  Card(
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          100,
+                                                                      height:
+                                                                          130,
+                                                                      child:
+                                                                          Column(
+                                                                        children: [
+                                                                          Container(
+                                                                            child:
+                                                                                Image.asset("assets/Points.png"),
+                                                                          ),
+                                                                          Text(
+                                                                              "Points"),
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(bottom: 8.0),
+                                                                            child:
+                                                                                Text("10"),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Card(
+                                                                    child: Row(
+                                                                      children: [
+                                                                        Container(
+                                                                          width:
+                                                                              100,
+                                                                          height:
+                                                                              130,
+                                                                          child:
+                                                                              Column(
+                                                                            children: [
+                                                                              Container(width: 70, height: 60, child: Image.asset("assets/Coins.png")),
+                                                                              Text("Coins"),
+                                                                              Text("10"),
+                                                                              ConfettiWidget(confettiController: _controllerBottomCenter, blastDirection: -pi / 2, emissionFrequency: 0.01, numberOfParticles: 80, maxBlastForce: 100, minBlastForce: 80, shouldLoop: false, blastDirectionality: BlastDirectionality.explosive, gravity: 0.3),
+                                                                            ],
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
                                                               ),
                                                             ),
                                                             actions: [
-                                                              TextButton(
-                                                                onPressed: () {
-                                                                  Navigator.of(
-                                                                          context)
-                                                                      .pop();
-                                                                },
-                                                                child: Text(
-                                                                    "Close"),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            38.0),
+                                                                child:
+                                                                    TextButton(
+                                                                  onPressed:
+                                                                      () {
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child: Text(
+                                                                      "Close"),
+                                                                ),
                                                               ),
                                                             ],
                                                           ),

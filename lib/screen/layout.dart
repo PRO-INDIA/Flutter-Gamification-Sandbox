@@ -10,6 +10,12 @@ import '../constants/mockdata.dart';
 class Layout extends StatelessWidget {
   const Layout({super.key, required this.title});
   final String title;
+  
+  bool isDesktop(BuildContext context) =>
+      MediaQuery.of(context).size.width >= 600;
+  bool isMobile(BuildContext context) =>
+      MediaQuery.of(context).size.width < 600;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
