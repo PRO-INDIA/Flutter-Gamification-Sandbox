@@ -34,10 +34,19 @@ class _HeaderState extends State<Header> {
       child: Container(
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        //Image.network("https://stagegamificationui.blob.core.windows.net/sandbox-assets/flag.svg?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D"),
-        Text(
-          "PRO Gamify",
-          style: TextStyle(color: Colors.white, fontSize: 30),
+        Row(
+          children: [
+            Image.network(
+              "https://stagegamificationui.blob.core.windows.net/sandbox-assets/flag_image.png?sv=2021-10-04&st=2023-04-25T08%3A24%3A07Z&se=2026-09-26T08%3A24%3A00Z&sr=b&sp=r&sig=bw%2B%2F0Jk6Z74H5WYtzBWbHHyW7WQP%2F2vXDLmdGDDtYUU%3D",
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18.0),
+              child: Text(
+                "PRO gamify",
+                style: TextStyle(color: Colors.white, fontSize: 30),
+              ),
+            ),
+          ],
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,

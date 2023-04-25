@@ -32,21 +32,22 @@ class DetailsCard extends StatelessWidget {
                               ),
                             ),
                             child: Container(
-                              child: Column(
-                                children: [
-                                  Text("From",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text("Chennai",
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 12.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("From",
                                         style: TextStyle(
-                                            fontSize: 23.0,
+                                            fontWeight: FontWeight.bold)),
+                                    Text("Chennai",
+                                        style: TextStyle(
+                                            fontSize: 26.0,
                                             color: Color(0xFF235449),
                                             fontWeight: FontWeight.bold)),
-                                  ),
-                                  Text("Tamilnadu"),
-                                ],
+                                    Text("Tamilnadu"),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -65,21 +66,22 @@ class DetailsCard extends StatelessWidget {
                               ),
                             ),
                             child: Container(
-                              child: Column(
-                                children: [
-                                  Text("To",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text("Kochi",
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 12.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("To",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    Text("Kochi",
                                         style: TextStyle(
                                             fontSize: 23.0,
                                             color: Color(0xFF235449),
                                             fontWeight: FontWeight.bold)),
-                                  ),
-                                  Text("Kerala"),
-                                ],
+                                    Text("Kerala"),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -98,21 +100,22 @@ class DetailsCard extends StatelessWidget {
                               ),
                             ),
                             child: Container(
-                              child: Column(
-                                children: [
-                                  Text("Date",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text("23 feb",
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 12.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Date",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    Text("23 feb",
                                         style: TextStyle(
                                             fontSize: 23.0,
                                             color: Color(0xFF235449),
                                             fontWeight: FontWeight.bold)),
-                                  ),
-                                  Text("Tuesday"),
-                                ],
+                                    Text("Tuesday"),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

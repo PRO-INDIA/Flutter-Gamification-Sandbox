@@ -13,7 +13,8 @@ class Buses extends StatefulWidget {
 
 class _MyHomePageState extends State<Buses> {
   bool _isCardShown = false;
-  final ConfettiController _controllerBottomCenter = ConfettiController();
+  final ConfettiController _controllerBottomCenter =
+      ConfettiController(duration: const Duration(seconds: 3));
 
   void _toggleCard() {
     setState(() {

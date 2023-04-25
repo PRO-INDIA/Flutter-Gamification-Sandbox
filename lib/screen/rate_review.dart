@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:progamification/progamification.dart';
 import 'package:sandbox_flutter/widgets/footer.dart';
 import 'package:sandbox_flutter/widgets/header.dart';
 import 'package:sandbox_flutter/widgets/star_rating.dart';
@@ -30,7 +31,8 @@ class RateReview extends StatefulWidget {
 
 class _RateReviewState extends State<RateReview> {
   int rating = 0;
-  final ConfettiController _controllerBottomCenter = ConfettiController();
+  final ConfettiController _controllerBottomCenter =
+      ConfettiController(duration: const Duration(seconds: 3));
 
   void initState() {
     super.initState();
@@ -201,7 +203,9 @@ class _RateReviewState extends State<RateReview> {
                     Padding(
                       padding: const EdgeInsets.all(18.0),
                       child: ElevatedButton(
-                        onPressed: () {
+                        onPressed: () async {
+                          await GamificationService.updateGameAction(
+                              "guna@pro", "64476ff29f1d57b9e3817d62", '', '');
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {

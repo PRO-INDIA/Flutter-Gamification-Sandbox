@@ -36,9 +36,12 @@ class Offers extends StatelessWidget {
                             ),
                           ],
                         ),
-                        child: Image.network(
-                          Data[index].imageUrl,
-                          fit: BoxFit.cover,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.network(
+                            Data[index].imageUrl,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                       flex: 1,

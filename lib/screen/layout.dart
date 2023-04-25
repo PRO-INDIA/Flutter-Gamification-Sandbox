@@ -155,9 +155,7 @@ class Layout extends StatelessWidget {
     return Container(
       child: Text(
         "Bus Booking",
-        style: TextStyle(
-          fontSize: 30.0,
-        ),
+        style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
       ),
     );
   }
