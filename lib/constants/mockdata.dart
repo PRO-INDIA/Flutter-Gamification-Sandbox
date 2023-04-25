@@ -270,3 +270,57 @@ final List<OfferData> offerData1 = [
     ),
   ),
 ];
+
+
+
+List<String> geographics = [
+  'Countries',
+  'Regions',
+  'Cities',
+  'Districts',
+  'Airports',
+  'Hotels',
+  'Places of interest'
+];
+List<String> stayingType = [
+  'Homes',
+  'Apartments',
+  'Resorts',
+  'Villas',
+  'Hostels',
+  'B&Bs',
+  'Guest houses'
+];
+List<String> destinations = [
+  'Unique places to stay',
+  'All destinations',
+  'All flight destinations',
+  'Discover Reviews',
+  'Discover monthly stays',
+  'Unpacked: Travel articles',
+  'Travel Communities',
+  'Seasonal and holiday deals',
+];
+List<String> travelModes = [
+  'Car hire',
+  'Flight finder',
+  'Restaurant reservations',
+  'Travel Agents'
+];
+List<String> services = [
+  'Customer Service help',
+  'Partner help',
+  'Careers',
+  'Sustainability',
+  'Press centre',
+  'Safety resource centre',
+  'Investor relations',
+  'Terms & Conditions',
+  'Partner dispute',
+  'How we work',
+  'Privacy & Cookie Statement',
+  'MSA Statement',
+  'Corporate contact',
+  'We Price Match',
+];
+

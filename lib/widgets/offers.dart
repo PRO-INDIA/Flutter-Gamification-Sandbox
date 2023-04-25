@@ -49,7 +49,10 @@ class Offers extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               ListTile(
-                                title: Text(Data[index].title),
+                                title: Text(
+                                  Data[index].title,
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
                                 subtitle: Text(Data[index].subTitle),
                               ),
                               Padding(
