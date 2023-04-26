@@ -94,11 +94,11 @@ class _HeaderState extends State<Header> {
                         children: [
                           Container(
                             child: Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   top: 18.0,
                                   bottom: 18.0,
-                                  left: 18.0,
-                                  right: 30),
+                                  left: width < 900 ? 5 : 18,
+                                  right: width < 900 ? 5 : 30),
                               child: Column(
                                 children: [
                                   Padding(
@@ -256,11 +256,11 @@ class _HeaderState extends State<Header> {
                         children: [
                           Container(
                             child: Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   top: 18.0,
                                   bottom: 18.0,
-                                  left: 18.0,
-                                  right: 30),
+                                  left: width < 900 ? 5 : 18,
+                                  right: width < 900 ? 5 : 30),
                               child: Column(
                                 children: [
                                   Padding(
@@ -418,11 +418,11 @@ class _HeaderState extends State<Header> {
                         children: [
                           Container(
                             child: Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   top: 18.0,
                                   bottom: 18.0,
-                                  left: 18.0,
-                                  right: 30),
+                                  left: width < 900 ? 5 : 18,
+                                  right: width < 900 ? 5 : 30),
                               child: Column(
                                 children: [
                                   Padding(

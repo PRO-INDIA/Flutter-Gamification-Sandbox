@@ -135,11 +135,7 @@ final List<OfferData> offerData = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -152,11 +148,7 @@ final List<OfferData> offerData = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -169,11 +161,7 @@ final List<OfferData> offerData = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -186,11 +174,7 @@ final List<OfferData> offerData = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -206,11 +190,7 @@ final List<OfferData> offerData1 = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -223,11 +203,7 @@ final List<OfferData> offerData1 = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image6.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -240,11 +216,7 @@ final List<OfferData> offerData1 = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -257,11 +229,7 @@ final List<OfferData> offerData1 = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -270,8 +238,6 @@ final List<OfferData> offerData1 = [
     ),
   ),
 ];
-
-
 
 List<String> geographics = [
   'Countries',
@@ -323,4 +289,3 @@ List<String> services = [
   'Corporate contact',
   'We Price Match',
 ];
-

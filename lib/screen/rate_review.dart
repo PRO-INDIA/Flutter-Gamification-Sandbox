@@ -67,21 +67,35 @@ class _RateReviewState extends State<RateReview> {
                         Padding(
                           padding:
                               const EdgeInsets.only(top: 18.0, bottom: 18.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Row(
                             children: [
-                              Text("Rate and Review Your Trip",
-                                  style: TextStyle(
-                                      fontSize: 23,
-                                      fontWeight: FontWeight.bold)),
                               Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text(
-                                    "With " + widget.travalsName,
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                    ),
-                                  ))
+                                padding: const EdgeInsets.all(18.0),
+                                child: IconButton(
+                                  icon: Icon(Icons.arrow_back_outlined),
+                                  iconSize: 32,
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Rate and Review Your Trip",
+                                      style: TextStyle(
+                                          fontSize: 23,
+                                          fontWeight: FontWeight.bold)),
+                                  Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Text(
+                                        "With " + widget.travalsName,
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                        ),
+                                      ))
+                                ],
+                              ),
                             ],
                           ),
                         ),

@@ -36,6 +36,7 @@ class _MyHomePageState extends State<Buses> {
     return ListView.builder(
         itemCount: widget.availableBuses.length,
         scrollDirection: Axis.vertical,
+        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
@@ -340,29 +341,26 @@ class _MyHomePageState extends State<Buses> {
       width: 400,
       child: Card(
           child: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 18.0),
-              child: Container(
-                  child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Boarding & Dropping",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18.0,
-                    ),
+            Container(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Boarding & Dropping",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
                   ),
-                  Text(
-                    "Change>",
-                    style: TextStyle(color: Color(0xFF235449)),
-                  ),
-                ],
-              )),
-            ),
+                ),
+                Text(
+                  "Change>",
+                  style: TextStyle(color: Color(0xFF235449)),
+                ),
+              ],
+            )),
             Padding(
               padding: const EdgeInsets.only(top: 18.0),
               child: Column(
