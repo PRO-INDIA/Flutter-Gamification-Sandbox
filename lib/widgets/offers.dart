@@ -14,6 +14,13 @@ class Offers extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
         return Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+            side: BorderSide(
+              color: Colors.grey,
+              width: 0.1,
+            ),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(19.0),
             child: Container(

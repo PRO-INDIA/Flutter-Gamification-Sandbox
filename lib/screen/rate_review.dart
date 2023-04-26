@@ -70,7 +70,8 @@ class _RateReviewState extends State<RateReview> {
                           child: Row(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(18.0),
+                                padding:
+                                    EdgeInsets.all(width > 900 ? 18.0 : 10),
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_back_outlined),
                                   iconSize: 32,
