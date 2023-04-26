@@ -80,6 +80,7 @@ class _RateReviewState extends State<RateReview> {
                                   },
                                 ),
                               ),
+                              
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
