@@ -33,7 +33,7 @@ class DetailsCard extends StatelessWidget {
                             ),
                             child: Container(
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 12.0),
+                                padding: const EdgeInsets.only(left: 19.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -129,7 +129,8 @@ class DetailsCard extends StatelessWidget {
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.symmetric(
-                                    horizontal: 25, vertical: 25),
+                                    horizontal: width > 900 ? 25 : 12,
+                                    vertical: 25),
                                 primary: Color.fromARGB(255, 230, 151, 6),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
@@ -159,20 +160,27 @@ class DetailsCard extends StatelessWidget {
                                     top: 20.0, bottom: 20.0, left: 10.0),
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text("From",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      Text("Chennai",
-                                          style: TextStyle(
-                                              fontSize: 23.0,
-                                              color: Color(0xFF235449),
-                                              fontWeight: FontWeight.bold)),
-                                      Text("Tamilnadu"),
-                                    ],
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("From",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 12.0),
+                                          child: Text("Chennai",
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color: Color(0xFF235449),
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
+                                        Text("Tamilnadu"),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -189,20 +197,27 @@ class DetailsCard extends StatelessWidget {
                                   ),
                                 ),
                                 child: Container(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text("To",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      Text("Kochi",
-                                          style: TextStyle(
-                                              fontSize: 23.0,
-                                              color: Color(0xFF235449),
-                                              fontWeight: FontWeight.bold)),
-                                      Text("Kerala"),
-                                    ],
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("To",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 12.0),
+                                          child: Text("Kochi",
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color: Color(0xFF235449),
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
+                                        Text("Kerala"),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -219,20 +234,27 @@ class DetailsCard extends StatelessWidget {
                                   ),
                                 ),
                                 child: Container(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text("Date",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      Text("23 feb",
-                                          style: TextStyle(
-                                              fontSize: 23.0,
-                                              color: Color(0xFF235449),
-                                              fontWeight: FontWeight.bold)),
-                                      Text("Tuesday"),
-                                    ],
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Date",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 12.0),
+                                          child: Text("23 feb",
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color: Color(0xFF235449),
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
+                                        Text("Tuesday"),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -253,7 +275,8 @@ class DetailsCard extends StatelessWidget {
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 25),
+                                          horizontal: 25,
+                                          vertical: width > 900 ? 25 : 12),
                                       primary: Color.fromARGB(255, 230, 151, 6),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(40),
@@ -274,19 +297,23 @@ class DetailsCard extends StatelessWidget {
                         ),
                         Positioned(
                           right: 50,
-                          bottom: 305,
+                          // bottom: 316,
+                          top: 103,
                           child: Container(
-                            width: 30,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.grey,
-                                width: 2.0,
+                            color: Colors.white,
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey,
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(20.0),
                               ),
-                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.network(
+                                  "https://stagegamificationui.blob.core.windows.net/sandbox-assets/left-Rotate-Arrow.png?sv=2021-10-04&st=2023-04-26T09%3A45%3A52Z&se=2025-01-27T09%3A45%3A00Z&sr=b&sp=r&sig=tVoksQ239Mcyf5VjY0xGhL0boJ5OYuqrpIaWNZ8iBTI%3D"),
                             ),
-                            child: Image.network(
-                                "https://stagegamificationui.blob.core.windows.net/sandbox-assets/left-Rotate-Arrow.png?sv=2021-10-04&st=2023-04-26T09%3A45%3A52Z&se=2025-01-27T09%3A45%3A00Z&sr=b&sp=r&sig=tVoksQ239Mcyf5VjY0xGhL0boJ5OYuqrpIaWNZ8iBTI%3D"),
                           ),
                         )
                       ]),

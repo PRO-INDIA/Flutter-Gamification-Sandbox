@@ -199,7 +199,7 @@ final List<OfferData> offerData1 = [
     ),
   ),
   OfferData(
-    title: 'Now get up to 15% OFF* on flights, stays, cabs & buses',
+    title: 'Now get up to 15% OFF* on cabs & buses',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image6.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',

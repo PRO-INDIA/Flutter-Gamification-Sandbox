@@ -19,11 +19,11 @@ class Footer extends StatelessWidget {
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [...footerCall()],
+                  children: [...footerCall(width)],
                 )
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [...footerCall()],
+                  children: [...footerCall(width)],
                 )),
     );
   }
@@ -41,23 +41,23 @@ class Footer extends StatelessWidget {
     );
   }
 
-  footerCall() {
+  footerCall(double width) {
     return {
       footerData(geographics),
       Padding(
-        padding: EdgeInsets.only(top: 20.0),
+        padding: EdgeInsets.only(top: width > 900 ? 20.0 : 30),
       ),
       footerData(stayingType),
       Padding(
-        padding: EdgeInsets.only(top: 20.0),
+        padding: EdgeInsets.only(top: width > 900 ? 20.0 : 30),
       ),
       footerData(destinations),
       Padding(
-        padding: EdgeInsets.only(top: 20.0),
+        padding: EdgeInsets.only(top: width > 900 ? 20.0 : 30),
       ),
       footerData(travelModes),
       Padding(
-        padding: EdgeInsets.only(top: 20.0),
+        padding: EdgeInsets.only(top: width > 900 ? 20.0 : 30),
       ),
       footerData(services)
     };

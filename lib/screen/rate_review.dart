@@ -80,7 +80,6 @@ class _RateReviewState extends State<RateReview> {
                                   },
                                 ),
                               ),
-                              
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -108,8 +107,8 @@ class _RateReviewState extends State<RateReview> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              RatingCard(),
-                              ReviewCard(),
+                              RatingCard(width),
+                              ReviewCard(width),
                               //Trip Summary Card
                             ],
                           )
@@ -118,10 +117,10 @@ class _RateReviewState extends State<RateReview> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              RatingCard(),
+                              RatingCard(width),
                               Padding(
                                 padding: const EdgeInsets.only(top: 18.0),
-                                child: ReviewCard(),
+                                child: ReviewCard(width),
                               ),
                               //Trip Summary Card
                             ],
@@ -142,7 +141,7 @@ class _RateReviewState extends State<RateReview> {
     );
   }
 
-  Widget RatingCard() {
+  Widget RatingCard(double width) {
     return Card(
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -316,8 +315,10 @@ class _RateReviewState extends State<RateReview> {
                         style: ElevatedButton.styleFrom(
                           primary: Color.fromARGB(255, 230, 151, 6),
                           padding: EdgeInsets.symmetric(
-                              horizontal: 30,
-                              vertical: 30), // set the background color
+                              horizontal: 40,
+                              vertical: width > 900
+                                  ? 30
+                                  : 18), // set the background color
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
                                 40), // set the rounded corners
@@ -335,7 +336,7 @@ class _RateReviewState extends State<RateReview> {
     ));
   }
 
-  Widget ReviewCard() {
+  Widget ReviewCard(double width) {
     return Container(
       width: 350,
       child: Card(

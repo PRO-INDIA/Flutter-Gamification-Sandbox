@@ -50,9 +50,17 @@ class _MyHomePageState extends State<Buses> {
                 Padding(
                   padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
                   child: Card(
-                    elevation: 8.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      side: BorderSide(
+                        color: Colors.grey,
+                        width: 0.3,
+                      ),
+                    ),
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 19.0, bottom: 19.0),
+                      padding: EdgeInsets.only(
+                          top: width > 900 ? 19.0 : 0,
+                          bottom: width > 900 ? 19.0 : 0),
                       child: Container(
                         child: Column(
                           children: [
@@ -75,10 +83,19 @@ class _MyHomePageState extends State<Buses> {
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(top: 8.0),
-                                          child: Text(widget
-                                              .availableBuses[index].type),
+                                          child: Text(
+                                            widget.availableBuses[index].type,
+                                            style: TextStyle(
+                                                fontSize:
+                                                    width < 900 ? 13 : 14),
+                                          ),
                                         ),
-                                        Image.asset('assets/bus-facility.png')
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 8.0),
+                                          child: Image.asset(
+                                              'assets/bus-facility.png'),
+                                        )
                                       ],
                                     ),
                                   ),
@@ -112,8 +129,10 @@ class _MyHomePageState extends State<Buses> {
                                                       child: Text(
                                                     widget.availableBuses[index]
                                                         .startTime,
-                                                    style:
-                                                        TextStyle(fontSize: 18),
+                                                    style: TextStyle(
+                                                        fontSize: 18,
+                                                        fontWeight:
+                                                            FontWeight.bold),
                                                   )),
                                                 ),
                                               )
@@ -149,8 +168,10 @@ class _MyHomePageState extends State<Buses> {
                                                       child: Text(
                                                     widget.availableBuses[index]
                                                         .endTime,
-                                                    style:
-                                                        TextStyle(fontSize: 18),
+                                                    style: TextStyle(
+                                                        fontSize: 18,
+                                                        fontWeight:
+                                                            FontWeight.bold),
                                                   )),
                                                 ),
                                               )
@@ -186,69 +207,102 @@ class _MyHomePageState extends State<Buses> {
                               ],
                             ),
                             if (width < 900)
-                              Row(
-                                children: [
-                                  Container(
+                              Stack(children: <Widget>[
+                                Positioned(
+                                  bottom: 30,
+                                  left: 80,
+                                  child: Center(
                                     child: Column(
                                       children: [
-                                        Text(widget
-                                            .availableBuses[index].startPlace),
-                                        Padding(
-                                          padding: const EdgeInsets.all(14.0),
+                                        Text(
+                                          "7h 50m",
+                                          style: TextStyle(color: Colors.grey),
+                                        ),
+                                        Container(
+                                          width: 85,
                                           child: Container(
-                                            width: 70,
-                                            padding: EdgeInsets.all(6),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(40)),
-                                              border: Border.all(
-                                                color: Colors.black,
-                                                width: 0.4,
-                                              ),
-                                            ),
-                                            child: Center(
-                                                child: Text(
-                                              widget.availableBuses[index]
-                                                  .startTime,
-                                              style: TextStyle(fontSize: 18),
-                                            )),
+                                            color: Colors.grey,
+                                            height: 1.0,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 50.0),
-                                    child: Column(
-                                      children: [
-                                        Text(widget
-                                            .availableBuses[index].endPlace),
-                                        Padding(
-                                          padding: const EdgeInsets.all(14.0),
-                                          child: Container(
-                                            width: 70,
-                                            padding: EdgeInsets.all(6),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(40)),
-                                              border: Border.all(
-                                                color: Colors.black,
-                                                width: 0.4,
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: Column(
+                                          children: [
+                                            Text(widget.availableBuses[index]
+                                                .startPlace),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(14.0),
+                                              child: Container(
+                                                width: 70,
+                                                padding: EdgeInsets.all(6),
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(40)),
+                                                  border: Border.all(
+                                                    color: Colors.black,
+                                                    width: 0.4,
+                                                  ),
+                                                ),
+                                                child: Center(
+                                                    child: Text(
+                                                  widget.availableBuses[index]
+                                                      .startTime,
+                                                  style:
+                                                      TextStyle(fontSize: 18),
+                                                )),
                                               ),
-                                            ),
-                                            child: Center(
-                                                child: Text(
-                                              widget.availableBuses[index]
-                                                  .endTime,
-                                              style: TextStyle(fontSize: 18),
-                                            )),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(left: 50.0),
+                                        child: Column(
+                                          children: [
+                                            Text(widget.availableBuses[index]
+                                                .endPlace),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(14.0),
+                                              child: Container(
+                                                width: 70,
+                                                padding: EdgeInsets.all(6),
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(40)),
+                                                  border: Border.all(
+                                                    color: Colors.black,
+                                                    width: 0.4,
+                                                  ),
+                                                ),
+                                                child: Center(
+                                                    child: Text(
+                                                  widget.availableBuses[index]
+                                                      .endTime,
+                                                  style:
+                                                      TextStyle(fontSize: 18),
+                                                )),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ])
                           ],
                         ),
                       ),
@@ -287,7 +341,8 @@ class _MyHomePageState extends State<Buses> {
                                       widget
                                           .availableBuses[index].boardingPoint,
                                       widget
-                                          .availableBuses[index].droppingPoint)
+                                          .availableBuses[index].droppingPoint,
+                                      width)
                                 ],
                               )
                             : Column(
@@ -316,7 +371,8 @@ class _MyHomePageState extends State<Buses> {
                                         widget.availableBuses[index]
                                             .boardingPoint,
                                         widget.availableBuses[index]
-                                            .droppingPoint),
+                                            .droppingPoint,
+                                        width),
                                   )
                                 ],
                               ),
@@ -336,7 +392,8 @@ class _MyHomePageState extends State<Buses> {
       String startTime,
       String boardingLandMark,
       String boardingPoint,
-      String droppingPoint) {
+      String droppingPoint,
+      double width) {
     return Container(
       width: 400,
       child: Card(
@@ -356,8 +413,9 @@ class _MyHomePageState extends State<Buses> {
                   ),
                 ),
                 Text(
-                  "Change>",
-                  style: TextStyle(color: Color(0xFF235449)),
+                  "Change >",
+                  style: TextStyle(
+                      color: Color(0xFF235449), fontWeight: FontWeight.bold),
                 ),
               ],
             )),
@@ -459,14 +517,13 @@ class _MyHomePageState extends State<Buses> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Seat",
+                        "Seat no.",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16.0),
                       ),
                       Text(
                         "R1",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
+                        style: TextStyle(fontSize: 16.0),
                       ),
                     ],
                   ),
@@ -495,10 +552,22 @@ class _MyHomePageState extends State<Buses> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16.0),
                       ),
-                      Text(
-                        fare,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
+                      Row(
+                        children: [
+                          Text(
+                            "₹ ",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 230, 151, 6),
+                            ),
+                          ),
+                          Text(
+                            fare,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16.0),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -602,8 +671,9 @@ class _MyHomePageState extends State<Buses> {
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 230, 151, 6),
                     padding: EdgeInsets.symmetric(
-                        horizontal: 25,
-                        vertical: 25), // set the background color
+                        horizontal: width > 900 ? 25 : 40,
+                        vertical:
+                            width > 900 ? 25 : 17), // set the background color
                     shape: RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.circular(40), // set the rounded corners

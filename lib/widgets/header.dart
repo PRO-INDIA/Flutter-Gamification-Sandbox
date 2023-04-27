@@ -42,8 +42,9 @@ class _HeaderState extends State<Header> {
             Padding(
               padding: const EdgeInsets.only(left: 18.0),
               child: Text(
-                "PRO gamify",
-                style: TextStyle(color: Colors.white, fontSize: 30),
+                "PRO gami",
+                style: TextStyle(
+                    color: Colors.white, fontSize: width > 900 ? 30 : 24),
               ),
             ),
           ],
@@ -67,12 +68,33 @@ class _HeaderState extends State<Header> {
                   PopupMenuItem(
                     child: Padding(
                       padding: const EdgeInsets.all(18.0),
-                      child: Text(
-                        'My Trips',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'My Trips',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              border: Border.all(
+                                color: Colors.red,
+                                width: 1.5,
+                              ),
+                            ),
+                            child: IconButton(
+                              icon: Icon(Icons.close_sharp),
+                              color: Colors.red,
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -131,7 +153,7 @@ class _HeaderState extends State<Header> {
                             ),
                           ),
                           Container(
-                            width: 300,
+                            width: width > 900 ? 300 : 280,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -293,7 +315,7 @@ class _HeaderState extends State<Header> {
                             ),
                           ),
                           Container(
-                            width: 300,
+                            width: width > 900 ? 300 : 280,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -455,7 +477,7 @@ class _HeaderState extends State<Header> {
                             ),
                           ),
                           Container(
-                            width: 300,
+                            width: width > 900 ? 300 : 280,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [

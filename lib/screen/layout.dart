@@ -72,7 +72,8 @@ class Layout extends StatelessWidget {
                         horizontal: width > 1100 ? 190.0 : 20),
                     child: Card(
                       child: Container(
-                        padding: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -82,12 +83,12 @@ class Layout extends StatelessWidget {
                                     fontWeight: FontWeight.bold)),
                             Container(
                               margin: EdgeInsets.only(top: 16.0),
-                              height: 180.0,
+                              height: 165.0,
                               child: Offers(Data: offerData),
                             ),
                             Container(
                               margin: EdgeInsets.only(top: 16.0),
-                              height: 180.0,
+                              height: 165.0,
                               child: Offers(Data: offerData1),
                             )
                           ],
@@ -100,8 +101,7 @@ class Layout extends StatelessWidget {
                   padding: EdgeInsets.only(top: 20.0),
                   margin: new EdgeInsets.symmetric(
                       horizontal: width > 1100 ? 190.0 : 20),
-                  child: Card(
-                      // color: Colors.transparent,
+                  child: Card(                    
                       child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: Container(
@@ -161,17 +161,21 @@ class Layout extends StatelessWidget {
   }
 
   Widget headContainer1() {
-    return RichText(
-      text: TextSpan(
-        text: 'Bus Ticket Booking.Travelling with a group? ',
-        style: TextStyle(color: Colors.black),
-        children: <TextSpan>[
-          TextSpan(
-            text: ' Hire a bus.',
-            style: TextStyle(
-                color: Color(0xFF235449), decoration: TextDecoration.underline),
-          ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
+      child: RichText(
+        text: TextSpan(
+          text: 'Bus Ticket Booking.Travelling with a group? ',
+          style: TextStyle(color: Colors.black),
+          children: <TextSpan>[
+            TextSpan(
+              text: ' Hire a bus.',
+              style: TextStyle(
+                  color: Color(0xFF235449),
+                  decoration: TextDecoration.underline),
+            ),
+          ],
+        ),
       ),
     );
   }

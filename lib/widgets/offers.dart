@@ -18,7 +18,7 @@ class Offers extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.0),
             side: BorderSide(
               color: Colors.grey,
-              width: 0.1,
+              width: 0.3,
             ),
           ),
           child: Padding(
@@ -29,28 +29,26 @@ class Offers extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.network(
-                          Data[index].imageUrl,
-                          fit: BoxFit.cover,
+                  Container(
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
                         ),
+                      ],
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.network(
+                        Data[index].imageUrl,
+                        fit: BoxFit.cover,
                       ),
                     ),
-                    flex: 1,
                   ),
                   Expanded(
                     child: Container(
@@ -70,7 +68,7 @@ class Offers extends StatelessWidget {
                             ]),
                       ),
                     ),
-                    flex: 2,
+                    // flex: 3,
                   ),
                 ],
               ),
