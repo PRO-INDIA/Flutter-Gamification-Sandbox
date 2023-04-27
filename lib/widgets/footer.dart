@@ -59,7 +59,10 @@ class Footer extends StatelessWidget {
       Padding(
         padding: EdgeInsets.only(top: width > 900 ? 20.0 : 30),
       ),
-      footerData(services)
+      footerData(services),
+      Padding(
+        padding: EdgeInsets.only(top: width > 900 ? 20.0 : 50),
+      ),
     };
   }
 }

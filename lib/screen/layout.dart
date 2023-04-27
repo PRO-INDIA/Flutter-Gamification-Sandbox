@@ -71,6 +71,13 @@ class Layout extends StatelessWidget {
                     margin: new EdgeInsets.symmetric(
                         horizontal: width > 1100 ? 190.0 : 20),
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.grey,
+                          width: 0.3,
+                        ),
+                      ),
                       child: Container(
                         padding: EdgeInsets.symmetric(
                             horizontal: 10.0, vertical: 30),
@@ -101,32 +108,40 @@ class Layout extends StatelessWidget {
                   padding: EdgeInsets.only(top: 20.0),
                   margin: new EdgeInsets.symmetric(
                       horizontal: width > 1100 ? 190.0 : 20),
-                  child: Card(                    
-                      child: Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: Container(
-                        child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Available Bus(5)",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 19.0,
-                          ),
+                  child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.grey,
+                          width: 0.3,
                         ),
-                        Container(child: Buses(availableBuses: availableBuses)),
-                        Container(
-                            child: Buses(availableBuses: availableBuses1)),
-                        Container(
-                            child: Buses(availableBuses: availableBuses2)),
-                        Container(
-                            child: Buses(availableBuses: availableBuses3)),
-                        Container(
-                            child: Buses(availableBuses: availableBuses4)),
-                      ],
-                    )),
-                  )),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(18.0),
+                        child: Container(
+                            child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Available Bus(5)",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 19.0,
+                              ),
+                            ),
+                            Container(
+                                child: Buses(availableBuses: availableBuses)),
+                            Container(
+                                child: Buses(availableBuses: availableBuses1)),
+                            Container(
+                                child: Buses(availableBuses: availableBuses2)),
+                            Container(
+                                child: Buses(availableBuses: availableBuses3)),
+                            Container(
+                                child: Buses(availableBuses: availableBuses4)),
+                          ],
+                        )),
+                      )),
                 ),
 
                 //description

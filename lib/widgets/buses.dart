@@ -402,22 +402,25 @@ class _MyHomePageState extends State<Buses> {
         child: Column(
           children: [
             Container(
-                child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Boarding & Dropping",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18.0,
+                child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Boarding & Dropping",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18.0,
+                    ),
                   ),
-                ),
-                Text(
-                  "Change >",
-                  style: TextStyle(
-                      color: Color(0xFF235449), fontWeight: FontWeight.bold),
-                ),
-              ],
+                  Text(
+                    "Change >",
+                    style: TextStyle(
+                        color: Color(0xFF235449), fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             )),
             Padding(
               padding: const EdgeInsets.only(top: 18.0),

@@ -15,6 +15,13 @@ class DetailsCard extends StatelessWidget {
         padding: const EdgeInsets.only(top: 18.0, bottom: 18.9),
         child: Container(
           child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                side: BorderSide(
+                  color: Colors.grey,
+                  width: 0.3,
+                ),
+              ),
               child: width > 900
                   ? Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
