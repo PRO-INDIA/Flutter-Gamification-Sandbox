@@ -102,84 +102,129 @@ class _MyHomePageState extends State<Buses> {
                                 ),
                                 if (width > 900)
                                   Expanded(
-                                    child: Row(
-                                      children: [
-                                        Container(
+                                    child: Stack(children: [
+                                      Positioned(
+                                        bottom: 30,
+                                        left: 80,
+                                        child: Center(
                                           child: Column(
                                             children: [
-                                              Text(widget.availableBuses[index]
-                                                  .startPlace),
                                               Padding(
-                                                padding:
-                                                    const EdgeInsets.all(14.0),
-                                                child: Container(
-                                                  width: 70,
-                                                  padding: EdgeInsets.all(6),
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                            Radius.circular(
-                                                                40)),
-                                                    border: Border.all(
-                                                      color: Colors.black,
-                                                      width: 0.4,
-                                                    ),
-                                                  ),
-                                                  child: Center(
-                                                      child: Text(
-                                                    widget.availableBuses[index]
-                                                        .startTime,
-                                                    style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                  )),
+                                                padding: const EdgeInsets.only(
+                                                    right: 58.0),
+                                                child: Text(
+                                                  "7h 50m",
+                                                  style: TextStyle(
+                                                      color: Colors.grey),
                                                 ),
-                                              )
+                                              ),
+                                              Container(
+                                                width: 200,
+                                                child: Container(
+                                                  color: Colors.grey,
+                                                  height: 1.0,
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ),
-                                        Container(
-                                            color: Colors.amber,
-                                            child: Divider()),
-                                        Container(
-                                          margin: EdgeInsets.only(left: 100.0),
-                                          child: Column(
-                                            children: [
-                                              Text(widget.availableBuses[index]
-                                                  .endPlace),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.all(14.0),
-                                                child: Container(
-                                                  width: 70,
-                                                  padding: EdgeInsets.all(6),
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                            Radius.circular(
-                                                                40)),
-                                                    border: Border.all(
-                                                      color: Colors.black,
-                                                      width: 0.4,
+                                      ),
+                                      Expanded(
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                              child: Column(
+                                                children: [
+                                                  Text(widget
+                                                      .availableBuses[index]
+                                                      .startPlace),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            14.0),
+                                                    child: Container(
+                                                      width: 70,
+                                                      padding:
+                                                          EdgeInsets.all(6),
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    40)),
+                                                        border: Border.all(
+                                                          color: Colors.black,
+                                                          width: 0.4,
+                                                        ),
+                                                      ),
+                                                      child: Center(
+                                                          child: Text(
+                                                        widget
+                                                            .availableBuses[
+                                                                index]
+                                                            .startTime,
+                                                        style: TextStyle(
+                                                            fontSize: 18,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold),
+                                                      )),
                                                     ),
-                                                  ),
-                                                  child: Center(
-                                                      child: Text(
-                                                    widget.availableBuses[index]
-                                                        .endTime,
-                                                    style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                  )),
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                        )
-                                      ],
-                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                                color: Colors.amber,
+                                                child: Divider()),
+                                            Container(
+                                              margin:
+                                                  EdgeInsets.only(left: 100.0),
+                                              child: Column(
+                                                children: [
+                                                  Text(widget
+                                                      .availableBuses[index]
+                                                      .endPlace),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            14.0),
+                                                    child: Container(
+                                                      width: 70,
+                                                      padding:
+                                                          EdgeInsets.all(6),
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    40)),
+                                                        border: Border.all(
+                                                          color: Colors.black,
+                                                          width: 0.4,
+                                                        ),
+                                                      ),
+                                                      child: Center(
+                                                          child: Text(
+                                                        widget
+                                                            .availableBuses[
+                                                                index]
+                                                            .endTime,
+                                                        style: TextStyle(
+                                                            fontSize: 18,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold),
+                                                      )),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ]),
                                   ),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 25.0),
