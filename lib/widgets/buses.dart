@@ -302,8 +302,10 @@ class _MyHomePageState extends State<Buses> {
                                                     child: Text(
                                                   widget.availableBuses[index]
                                                       .startTime,
-                                                  style:
-                                                      TextStyle(fontSize: 18),
+                                                  style: TextStyle(
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 )),
                                               ),
                                             )
@@ -336,8 +338,10 @@ class _MyHomePageState extends State<Buses> {
                                                     child: Text(
                                                   widget.availableBuses[index]
                                                       .endTime,
-                                                  style:
-                                                      TextStyle(fontSize: 18),
+                                                  style: TextStyle(
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 )),
                                               ),
                                             )

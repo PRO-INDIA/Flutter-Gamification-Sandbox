@@ -173,7 +173,7 @@ final List<OfferData> offerData = [
     title: 'Grab up to 10% offer',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image7.png?sv=2021-10-04&st=2023-04-27T12%3A21%3A26Z&se=2027-08-28T12%3A21%3A00Z&sr=b&sp=r&sig=%2B%2FZuLFwvKaYaDYb7%2FVyUKkYiooWy2dC28WvFea0Ahy4%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(
@@ -215,7 +215,7 @@ final List<OfferData> offerData1 = [
     title: 'Grab up to 10% offer',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image7.png?sv=2021-10-04&st=2023-04-27T12%3A21%3A26Z&se=2027-08-28T12%3A21%3A00Z&sr=b&sp=r&sig=%2B%2FZuLFwvKaYaDYb7%2FVyUKkYiooWy2dC28WvFea0Ahy4%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(

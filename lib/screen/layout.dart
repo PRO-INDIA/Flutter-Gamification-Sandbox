@@ -123,7 +123,7 @@ class Layout extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Available Bus(5)",
+                              "Available bus (5)",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 19.0,
@@ -169,7 +169,7 @@ class Layout extends StatelessWidget {
   Widget headContainer() {
     return Container(
       child: Text(
-        "Bus Booking",
+        "Bus booking",
         style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
       ),
     );
