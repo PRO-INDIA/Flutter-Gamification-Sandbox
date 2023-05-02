@@ -7,6 +7,7 @@ import 'package:progamification/progamification.dart';
 import 'package:sandbox_flutter/widgets/footer.dart';
 import 'package:sandbox_flutter/widgets/header.dart';
 import 'package:sandbox_flutter/widgets/star_rating.dart';
+import '../environment/environment.dart';
 
 class RateReview extends StatefulWidget {
   final travalsName;
@@ -220,7 +221,7 @@ class _RateReviewState extends State<RateReview> {
                       child: ElevatedButton(
                         onPressed: () async {
                           await GamificationService.updateGameAction(
-                              "guna@pro", "64476ff29f1d57b9e3817d62", '', '');
+                              userId, gameActionId, '', '');
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
@@ -248,7 +249,7 @@ class _RateReviewState extends State<RateReview> {
                                                   padding:
                                                       const EdgeInsets.only(
                                                           bottom: 8.0),
-                                                  child: Text("10"),
+                                                  child: Text("20"),
                                                 ),
                                               ],
                                             ),
@@ -268,7 +269,7 @@ class _RateReviewState extends State<RateReview> {
                                                         child: Image.asset(
                                                             "assets/Coins.png")),
                                                     Text("Coins"),
-                                                    Text("10"),
+                                                    Text("20"),
                                                     ConfettiWidget(
                                                         confettiController:
                                                             _controllerBottomCenter,

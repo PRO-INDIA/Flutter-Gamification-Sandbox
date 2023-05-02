@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:progamification/progamification.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import '../environment/environment.dart';
 import '../screen/rate_review.dart';
 
 class Header extends StatefulWidget {
@@ -589,7 +589,7 @@ class _HeaderState extends State<Header> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: LeaderBoard("guna@pro", "6440c9b54a1e1dbe73bf2040"),
+              child: LeaderBoard(userId, applicationId),
             )
           ],
         ),

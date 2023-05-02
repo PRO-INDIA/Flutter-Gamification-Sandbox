@@ -420,10 +420,10 @@ packages:
     dependency: "direct main"
     description:
       name: progamification
-      sha256: e458816649d897342de76f6ba8c2a21c68e1101257e3e7225c6cb36934d851d5
+      sha256: "28f44f4ec3817647d3f939fab24746d62219882b46be8042dff455d9289f08d5"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.0-beta-5"
+    version: "0.0.0-beta-8"
   provider:
     dependency: transitive
     description:

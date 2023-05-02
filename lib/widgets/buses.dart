@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sandbox_flutter/widgets/sucess_card.dart';
 import 'package:confetti/confetti.dart';
 import 'package:progamification/progamification.dart';
+import '../environment/environment.dart';
 
 class Buses extends StatefulWidget {
   final availableBuses;
@@ -632,7 +633,7 @@ class _MyHomePageState extends State<Buses> {
                 ElevatedButton(
                   onPressed: () async {
                     await GamificationService.updateGameAction(
-                        "guna@pro", "6440ca514a1e1df859bf2054", '', '');
+                        userId, gameActionId, '', '');
                     showDialog(
                       context: context,
                       builder: (BuildContext context) {
@@ -659,7 +660,7 @@ class _MyHomePageState extends State<Buses> {
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 bottom: 8.0),
-                                            child: Text("10"),
+                                            child: Text("20"),
                                           ),
                                         ],
                                       ),
@@ -679,7 +680,7 @@ class _MyHomePageState extends State<Buses> {
                                                   child: Image.asset(
                                                       "assets/Coins.png")),
                                               Text("Coins"),
-                                              Text("10"),
+                                              Text("20"),
                                               ConfettiWidget(
                                                   confettiController:
                                                       _controllerBottomCenter,
