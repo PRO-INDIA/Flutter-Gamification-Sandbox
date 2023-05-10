@@ -153,7 +153,7 @@ class _HeaderState extends State<Header> {
                             ),
                           ),
                           Container(
-                            width: width > 900 ? 300 : 280,
+                            width: width > 365 ? width > 900 ? 300: 280: 230;
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -315,7 +315,7 @@ class _HeaderState extends State<Header> {
                             ),
                           ),
                           Container(
-                            width: width > 900 ? 300 : 280,
+                            width: width > 365 ? width > 900 ? 300: 280: 230;
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -477,7 +477,7 @@ class _HeaderState extends State<Header> {
                             ),
                           ),
                           Container(
-                            width: width > 900 ? 300 : 280,
+                             width: width > 365 ? width > 900 ? 300: 280: 230;
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
