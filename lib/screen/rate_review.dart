@@ -86,7 +86,7 @@ class _RateReviewState extends State<RateReview> {
                                 children: [
                                   Text("Rate and Review Your Trip",
                                       style: TextStyle(
-                                          fontSize: 23,
+                                          fontSize: width > 360 ? 23 : 21,
                                           fontWeight: FontWeight.bold)),
                                   Padding(
                                       padding: EdgeInsets.all(8.0),
@@ -297,7 +297,7 @@ class _RateReviewState extends State<RateReview> {
                                       padding: const EdgeInsets.only(top: 38.0),
                                       child: TextButton(
                                         onPressed: () {
-                                          Navigator.of(context).pop();
+                                          Navigator.push(context,MaterialPageRoute(builder: (context) => Layout(title: "")));
                                         },
                                         child: Text("Close"),
                                       ),

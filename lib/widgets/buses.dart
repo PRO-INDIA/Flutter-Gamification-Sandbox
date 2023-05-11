@@ -461,7 +461,7 @@ class _MyHomePageState extends State<Buses> {
                     "Boarding & Dropping",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 18.0,
+                      fontSize: width < 365 ? 13.5 : 18.0,
                     ),
                   ),
                   Text(
