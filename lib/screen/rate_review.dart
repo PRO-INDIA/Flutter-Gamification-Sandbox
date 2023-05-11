@@ -8,6 +8,7 @@ import 'package:sandbox_flutter/widgets/footer.dart';
 import 'package:sandbox_flutter/widgets/header.dart';
 import 'package:sandbox_flutter/widgets/star_rating.dart';
 import '../environment/environment.dart';
+import '../screen/layout.dart';
 
 class RateReview extends StatefulWidget {
   final travalsName;
