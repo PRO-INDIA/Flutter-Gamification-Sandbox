@@ -4,13 +4,15 @@ import 'package:progamification/progamification.dart';
 import 'package:sandbox_flutter/widgets/description.dart';
 import 'package:sandbox_flutter/screen/layout.dart';
 
+import 'environment/environment.dart';
+
 void main() {
-  GamificationService.init(
-      '887ddc99-b193-43ad-aa42-31510be0f9de',
-      "MWUyNWY4MDMtOWE1Zi00Y2E2LTlhYjAtYThkYTA3YjNhOWZi",
-      "guna@pro",
-      "6440c9b54a1e1dbe73bf2040");
+  gamificationService();
   runApp(const MyApp());
+}
+
+gamificationService() async {
+  await GamificationService.init(clientId, clientSecret, userId, applicationId);
 }
 
 class MyApp extends StatelessWidget {

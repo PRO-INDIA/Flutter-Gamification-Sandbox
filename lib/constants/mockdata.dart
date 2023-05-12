@@ -135,11 +135,7 @@ final List<OfferData> offerData = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -152,11 +148,7 @@ final List<OfferData> offerData = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -169,11 +161,7 @@ final List<OfferData> offerData = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -185,12 +173,8 @@ final List<OfferData> offerData = [
     title: 'Grab up to 10% offer',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image7.png?sv=2021-10-04&st=2023-04-27T12%3A21%3A26Z&se=2027-08-28T12%3A21%3A00Z&sr=b&sp=r&sig=%2B%2FZuLFwvKaYaDYb7%2FVyUKkYiooWy2dC28WvFea0Ahy4%3D',
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -206,11 +190,7 @@ final List<OfferData> offerData1 = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -219,15 +199,11 @@ final List<OfferData> offerData1 = [
     ),
   ),
   OfferData(
-    title: 'Now get up to 15% OFF* on flights, stays, cabs & buses',
+    title: 'Now get up to 15% OFF* on cabs & buses',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image6.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -239,12 +215,8 @@ final List<OfferData> offerData1 = [
     title: 'Grab up to 10% offer',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image7.png?sv=2021-10-04&st=2023-04-27T12%3A21%3A26Z&se=2027-08-28T12%3A21%3A00Z&sr=b&sp=r&sig=%2B%2FZuLFwvKaYaDYb7%2FVyUKkYiooWy2dC28WvFea0Ahy4%3D',
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -257,11 +229,7 @@ final List<OfferData> offerData1 = [
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
         'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
-    button: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,
-        shadowColor: Colors.transparent,
-      ),
+    button: TextButton(
       onPressed: () {},
       child: Text(
         'Book Now >',
@@ -269,4 +237,55 @@ final List<OfferData> offerData1 = [
       ),
     ),
   ),
+];
+
+List<String> geographics = [
+  'Countries',
+  'Regions',
+  'Cities',
+  'Districts',
+  'Airports',
+  'Hotels',
+  'Places of interest'
+];
+List<String> stayingType = [
+  'Homes',
+  'Apartments',
+  'Resorts',
+  'Villas',
+  'Hostels',
+  'B&Bs',
+  'Guest houses'
+];
+List<String> destinations = [
+  'Unique places to stay',
+  'All destinations',
+  'All flight destinations',
+  'Discover Reviews',
+  'Discover monthly stays',
+  'Unpacked: Travel articles',
+  'Travel Communities',
+  'Seasonal and holiday deals',
+];
+List<String> travelModes = [
+  'Car hire',
+  'Flight finder',
+  'Restaurant reservations',
+  'Travel Agents'
+];
+List<String> services = [
+  'Customer Service help',
+  'Partner help',
+  'Careers',
+  'Sustainability',
+  'Press centre',
+  'Safety resource centre',
+  'Investor relations',
+  'Terms & Conditions',
+  'Partner dispute',
+  'How we work',
+  'Privacy & Cookie Statement',
+  'MSA Statement',
+  'Corporate contact',
+  'We Price Match',
 ];

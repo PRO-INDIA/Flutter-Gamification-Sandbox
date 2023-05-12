@@ -7,128 +7,324 @@ class DetailsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
+    final width = screenSize.width;
     return Container(
       child: Padding(
         padding: const EdgeInsets.only(top: 18.0, bottom: 18.9),
         child: Container(
           child: Card(
-              child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.only(top: 20.0, bottom: 20.0, left: 10.0),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        width: 0.4,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  child: Container(
-                    child: Column(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                side: BorderSide(
+                  color: Colors.grey,
+                  width: 0.3,
+                ),
+              ),
+              child: width > 900
+                  ? Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("From",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("Chennai",
-                              style: TextStyle(
-                                  fontSize: 23.0,
-                                  color: Color(0xFF235449),
-                                  fontWeight: FontWeight.bold)),
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(
+                                top: 20.0, bottom: 20.0, left: 10.0),
+                            decoration: BoxDecoration(
+                              border: Border(
+                                right: BorderSide(
+                                  width: 0.4,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                            child: Container(
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 19.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("From",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    Text("Chennai",
+                                        style: TextStyle(
+                                            fontSize: 26.0,
+                                            color: Color(0xFF235449),
+                                            fontWeight: FontWeight.bold)),
+                                    Text("Tamilnadu"),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          flex: 2,
                         ),
-                        Text("Tamilnadu"),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.only(top: 20.0, bottom: 20.0, left: 10.0),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        width: 0.4,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  child: Container(
-                    child: Column(
-                      children: [
-                        Text("To",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("Kochi",
-                              style: TextStyle(
-                                  fontSize: 23.0,
-                                  color: Color(0xFF235449),
-                                  fontWeight: FontWeight.bold)),
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(
+                                top: 20.0, bottom: 20.0, left: 10.0),
+                            decoration: BoxDecoration(
+                              border: Border(
+                                right: BorderSide(
+                                  width: 0.4,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                            child: Container(
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 12.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("To",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    Text("Kochi",
+                                        style: TextStyle(
+                                            fontSize: 23.0,
+                                            color: Color(0xFF235449),
+                                            fontWeight: FontWeight.bold)),
+                                    Text("Kerala"),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          flex: 2,
                         ),
-                        Text("Kerala"),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.only(top: 20.0, bottom: 20.0, left: 10.0),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        width: 0.4,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  child: Container(
-                    child: Column(
-                      children: [
-                        Text("Date",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("23 feb",
-                              style: TextStyle(
-                                  fontSize: 23.0,
-                                  color: Color(0xFF235449),
-                                  fontWeight: FontWeight.bold)),
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(
+                                top: 20.0, bottom: 20.0, left: 10.0),
+                            decoration: BoxDecoration(
+                              border: Border(
+                                right: BorderSide(
+                                  width: 0.4,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                            child: Container(
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 12.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Date",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    Text("23 feb",
+                                        style: TextStyle(
+                                            fontSize: 23.0,
+                                            color: Color(0xFF235449),
+                                            fontWeight: FontWeight.bold)),
+                                    Text("Tuesday"),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          flex: 2,
                         ),
-                        Text("Tuesday"),
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 20),
+                          child: Container(
+                            width: 200,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: width > 900 ? 25 : 12,
+                                    vertical: 25),
+                                primary: Color.fromARGB(255, 230, 151, 6),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(40),
+                                ),
+                              ),
+                              onPressed: () {},
+                              child: const Text(
+                                'Search',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 23.0),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Container(
-                  width: 200,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 25, vertical: 25),
-                      primary: Color.fromARGB(255, 230, 151, 6),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                      ),
-                    ),
-                    onPressed: () {},
-                    child: const Text(
-                      'Search',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 23.0),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          )),
+                    )
+                  : Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: Stack(children: <Widget>[
+                        Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                    top: 20.0, bottom: 20.0, left: 10.0),
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("From",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 12.0),
+                                          child: Text("Chennai",
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color: Color(0xFF235449),
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
+                                        Text("Tamilnadu"),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width,
+                                padding: EdgeInsets.only(
+                                    top: 20.0, bottom: 20.0, left: 10.0),
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                    top: BorderSide(
+                                      width: 0.4,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                                child: Container(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("To",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 12.0),
+                                          child: Text("Kochi",
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color: Color(0xFF235449),
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
+                                        Text("Kerala"),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width,
+                                padding: EdgeInsets.only(
+                                    top: 20.0, bottom: 20.0, left: 10.0),
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                    top: BorderSide(
+                                      width: 0.4,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                                child: Container(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Date",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 12.0),
+                                          child: Text("23 feb",
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color: Color(0xFF235449),
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
+                                        Text("Tuesday"),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                    top: BorderSide(
+                                      width: 0.4,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 20, vertical: 20),
+                                child: Container(
+                                  width: 200,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 25,
+                                          vertical: width > 900 ? 25 : 12),
+                                      primary: Color.fromARGB(255, 230, 151, 6),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(40),
+                                      ),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text(
+                                      'Search',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 23.0),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          right: 50,
+                          // bottom: 316,
+                          top: 103,
+                          child: Container(
+                            color: Colors.white,
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey,
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: Image.network(
+                                  "https://stagegamificationui.blob.core.windows.net/sandbox-assets/left-Rotate-Arrow.png?sv=2021-10-04&st=2023-04-26T09%3A45%3A52Z&se=2025-01-27T09%3A45%3A00Z&sr=b&sp=r&sig=tVoksQ239Mcyf5VjY0xGhL0boJ5OYuqrpIaWNZ8iBTI%3D"),
+                            ),
+                          ),
+                        )
+                      ]),
+                    )),
         ),
       ),
     );
