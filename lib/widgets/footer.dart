@@ -23,7 +23,29 @@ class Footer extends StatelessWidget {
                 )
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [...footerCall(width)],
+                  children: [
+                    ...footerCall(width),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Center(
+                          child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xff49ae99),
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Version : v1.0.0',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      )),
+                    ),
+                  ],
                 )),
     );
   }
