@@ -8,6 +8,7 @@ import 'package:sandbox_flutter/widgets/footer.dart';
 import 'package:sandbox_flutter/widgets/header.dart';
 import 'package:sandbox_flutter/widgets/star_rating.dart';
 import '../environment/environment.dart';
+import 'layout.dart';
 
 class RateReview extends StatefulWidget {
   final travalsName;
@@ -297,7 +298,11 @@ class _RateReviewState extends State<RateReview> {
                                       padding: const EdgeInsets.only(top: 38.0),
                                       child: TextButton(
                                         onPressed: () {
-                                          Navigator.push(context,MaterialPageRoute(builder: (context) => Layout(title: "")));
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Layout(title: "")));
                                         },
                                         child: Text("Close"),
                                       ),
