@@ -11,7 +11,9 @@ void main() async {
 }
 
 gamificationService() async {
-  await GamificationService.init(clientId, clientSecret, userId, applicationId);
+  ProgamificationConfig.initialize(
+      clientId, clientSecret, userId, applicationId);
+  await GamificationService.init();
 }
 
 class MyApp extends StatelessWidget {
