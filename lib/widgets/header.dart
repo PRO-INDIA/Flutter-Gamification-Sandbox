@@ -2,18 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:progamification/progamification.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sandbox_flutter/widgets/create-gamification.dart';
 import '../environment/environment.dart';
 import '../screen/rate_review.dart';
 
 class Header extends StatefulWidget {
-  const Header({super.key});
-
+  const Header({super.key, required this.sandboxResponce});
+  final sandboxResponce;
   @override
   State<Header> createState() => _HeaderState();
 }
 
 class _HeaderState extends State<Header> {
   bool _isCardShown = false;
+
   void _toggleCard() {
     setState(() {
       _isCardShown = !_isCardShown;
@@ -42,7 +44,7 @@ class _HeaderState extends State<Header> {
             Padding(
               padding: const EdgeInsets.only(left: 18.0),
               child: Text(
-                "PRO gami",
+                "PRO Gami",
                 style: TextStyle(
                     color: Colors.white, fontSize: width > 900 ? 30 : 24),
               ),
@@ -242,6 +244,8 @@ class _HeaderState extends State<Header> {
                                                           startcity: "kolathur",
                                                           endcity:
                                                               "Mattuthavani",
+                                                          sandboxResponce: widget
+                                                              .sandboxResponce,
                                                         )),
                                               );
                                             },
@@ -408,6 +412,8 @@ class _HeaderState extends State<Header> {
                                                           startcity: "CMBT",
                                                           endcity:
                                                               "Central Bus Stop",
+                                                          sandboxResponce: widget
+                                                              .sandboxResponce,
                                                         )),
                                               );
                                             },
@@ -574,6 +580,8 @@ class _HeaderState extends State<Header> {
                                                           startcity: "Guindy",
                                                           endcity:
                                                               "Main Bus Stop",
+                                                          sandboxResponce: widget
+                                                              .sandboxResponce,
                                                         )),
                                               );
                                             },
@@ -602,14 +610,67 @@ class _HeaderState extends State<Header> {
             Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: LeaderBoard(
-                  applicationId: applicationId,
-                  userId: userId,
+                  applicationId: widget.sandboxResponce['applicationId'],
+                  userId: widget.sandboxResponce['userId'],
                   overLayPosition: OverLayPositionModel(
                       top: 50.0, right: 10.0, left: null, bottom: null),
-                ))
+                )),
+            Padding(
+              padding: EdgeInsets.only(top: 5.0, left: 10.0),
+              child: SizedBox(
+                width: 40.0, // Decrease size width
+                height: 40.0,
+                child: IconButton(
+                  onPressed: () {
+                    handleLogout(context);
+                  },
+                  // color: Colors.white,
+                  icon: Icon(Icons.logout_rounded),
+                  tooltip: 'Logout', // Optional tooltip to show on long press
+                ),
+              ),
+            ),
           ],
         ),
       ])),
+    );
+  }
+
+  void handleLogout(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Confirm Logout'),
+          content: Text('Are you sure you want to logout ?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              style: ButtonStyle(
+                foregroundColor:
+                    MaterialStateProperty.all<Color>(Color(0xFF235449)),
+              ),
+              child: Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CreateGamefication(),
+                  ),
+                );
+              },
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
+              ),
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

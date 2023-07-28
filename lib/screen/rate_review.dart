@@ -11,13 +11,6 @@ import '../environment/environment.dart';
 import 'layout.dart';
 
 class RateReview extends StatefulWidget {
-  final travalsName;
-  final startPlace;
-  final startcity;
-  final endplace;
-  final endcity;
-  final ticketId;
-
   const RateReview(
       {super.key,
       required this.travalsName,
@@ -25,7 +18,16 @@ class RateReview extends StatefulWidget {
       required this.endplace,
       required this.startPlace,
       required this.startcity,
-      required this.ticketId});
+      required this.ticketId,
+      required this.sandboxResponce});
+
+  final travalsName;
+  final startPlace;
+  final startcity;
+  final endplace;
+  final endcity;
+  final ticketId;
+  final sandboxResponce;
 
   @override
   State<RateReview> createState() => _RateReviewState();
@@ -57,7 +59,7 @@ class _RateReviewState extends State<RateReview> {
                   Container(
                       padding: EdgeInsets.all(5.0),
                       color: Color(0xFF235449),
-                      child: Header()),
+                      child: Header(sandboxResponce: widget.sandboxResponce)),
 
                   //body
                   Container(
@@ -222,7 +224,10 @@ class _RateReviewState extends State<RateReview> {
                       child: ElevatedButton(
                         onPressed: () async {
                           await GamificationService.updateGameAction(
-                              userId, gameActionId, '', '');
+                              widget.sandboxResponce['userId'],
+                              widget.sandboxResponce['gameId'],
+                              '',
+                              '');
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
@@ -299,10 +304,15 @@ class _RateReviewState extends State<RateReview> {
                                       child: TextButton(
                                         onPressed: () {
                                           Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Layout(title: "")));
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => Layout(
+                                                title: "",
+                                                sandboxResponse:
+                                                    widget.sandboxResponce,
+                                              ),
+                                            ),
+                                          );
                                         },
                                         child: Text("Close"),
                                       ),

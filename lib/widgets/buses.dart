@@ -7,7 +7,9 @@ import '../environment/environment.dart';
 
 class Buses extends StatefulWidget {
   final availableBuses;
-  const Buses({super.key, required this.availableBuses});
+  final sandboxResponce;
+  const Buses(
+      {super.key, required this.availableBuses, required this.sandboxResponce});
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -633,7 +635,10 @@ class _MyHomePageState extends State<Buses> {
                 ElevatedButton(
                   onPressed: () async {
                     await GamificationService.updateGameAction(
-                        userId, gameActionId, '', '');
+                        widget.sandboxResponce['userId'],
+                        widget.sandboxResponce['gameId'],
+                        '',
+                        '');
                     showDialog(
                       context: context,
                       builder: (BuildContext context) {

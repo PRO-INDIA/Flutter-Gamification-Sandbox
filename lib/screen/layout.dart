@@ -6,11 +6,13 @@ import 'package:sandbox_flutter/widgets/footer.dart';
 import 'package:sandbox_flutter/widgets/header.dart';
 import 'package:sandbox_flutter/widgets/offers.dart';
 import '../constants/mockdata.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../constants/sandbox_data.dart';
 
 class Layout extends StatelessWidget {
-  const Layout({super.key, required this.title});
+  const Layout({super.key, required this.title, required this.sandboxResponse});
   final String title;
-
+  final sandboxResponse;
   bool isDesktop(BuildContext context) =>
       MediaQuery.of(context).size.width >= 600;
   bool isMobile(BuildContext context) =>
@@ -33,7 +35,7 @@ class Layout extends StatelessWidget {
                     height: 60,
                     padding: EdgeInsets.all(5.0),
                     color: Color(0xFF235449),
-                    child: Header()),
+                    child: Header(sandboxResponce: sandboxResponse)),
 
                 Container(
                   margin: new EdgeInsets.symmetric(
@@ -60,7 +62,11 @@ class Layout extends StatelessWidget {
                       ),
 
                       //header component
-                      Container(child: DetailsCard())
+                      Column(
+                        children: [
+                          Container(child: DetailsCard()),
+                        ],
+                      )
                     ],
                   ),
                 ),
@@ -129,16 +135,31 @@ class Layout extends StatelessWidget {
                                 fontSize: 19.0,
                               ),
                             ),
+                            // ignore: avoid_unnecessary_containers
                             Container(
-                                child: Buses(availableBuses: availableBuses)),
+                                child: Buses(
+                                    availableBuses: availableBuses,
+                                    sandboxResponce: sandboxResponse)),
+                            // ignore: avoid_unnecessary_containers
                             Container(
-                                child: Buses(availableBuses: availableBuses1)),
+                                child: Buses(
+                                    availableBuses: availableBuses1,
+                                    sandboxResponce: sandboxResponse)),
+                            // ignore: avoid_unnecessary_containers
                             Container(
-                                child: Buses(availableBuses: availableBuses2)),
+                                child: Buses(
+                                    availableBuses: availableBuses2,
+                                    sandboxResponce: sandboxResponse)),
+                            // ignore: avoid_unnecessary_containers
                             Container(
-                                child: Buses(availableBuses: availableBuses3)),
+                                child: Buses(
+                                    availableBuses: availableBuses3,
+                                    sandboxResponce: sandboxResponse)),
+                            // ignore: avoid_unnecessary_containers
                             Container(
-                                child: Buses(availableBuses: availableBuses4)),
+                                child: Buses(
+                                    availableBuses: availableBuses4,
+                                    sandboxResponce: sandboxResponse)),
                           ],
                         )),
                       )),
