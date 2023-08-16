@@ -1,9 +1,9 @@
 //Constant
-var clientId = "887ddc99-b193-43ad-aa42-31510be0f9de";
-var clientSecret = "MWUyNWY4MDMtOWE1Zi00Y2E2LTlhYjAtYThkYTA3YjNhOWZi";
+var clientId = "08ce0068-2906-44d4-b840-b268e5511624";
+var clientSecret = "2BG8Q~Vsd33.QQ93jcejZkrr5aVyXvxbl_FrubYg";
 
 //dynamic from gamification Website
 
-var userId = "f8f9b039-7bca-4583-a1fc-867c122bf4ec";
-var applicationId = "6450d7846bb30c8b65548ec9";
-var gameActionId = "6450d7846bb30ce507548ed1";
+var userId = "6b40a8ec-6046-4fdf-8a07-9c5f8aba4e8a";
+var applicationId = "64c6645b7cb0ce6020901a4e";
+var gameActionId = "64c6645e7cb0ce6020901a71";
