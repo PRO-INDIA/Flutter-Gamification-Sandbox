@@ -12,19 +12,35 @@ class Footer extends StatelessWidget {
     final width = screenSize.width;
     return Padding(
       padding: EdgeInsets.only(top: 20.0),
-      child: Container(
-          margin:
-              new EdgeInsets.symmetric(horizontal: width > 1100 ? 190.0 : 20),
-          child: width > 1100
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [...footerCall(width)],
-                )
-              : Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [...footerCall(width)],
-                )),
+      child: Column(
+        children: [
+          Container(
+              margin: new EdgeInsets.symmetric(
+                  horizontal: width > 1100 ? 190.0 : 20),
+              child: width > 1100
+                  ? Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [...footerCall(width)],
+                    )
+                  : Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [...footerCall(width)],
+                    )),
+          Container(
+            child: Column(children: [
+              Text(
+                " Copyright \u00A9 Peninsular Research Operation 2023. All rights reserved",
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                "Version : 2.0.0",
+                style: TextStyle(color: Colors.white),
+              ),
+            ]),
+          )
+        ],
+      ),
     );
   }
 
