@@ -40,6 +40,8 @@ dependencies:
   flutter_svg: ^1.1.6
   confetti: ^0.7.0
   progamification: 1.5.0-beta.1
+  tutorial: ^1.0.9
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:

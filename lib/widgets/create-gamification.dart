@@ -4,8 +4,7 @@ import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:progamification/progamification.dart';
-import 'package:sandbox_flutter/screen/landing_widget.dart';
-
+import 'package:animated_text_kit/animated_text_kit.dart';
 import '../constants/sandbox_data.dart';
 import '../environment/environment.dart';
 import '../screen/layout.dart';
@@ -18,12 +17,13 @@ class CreateGamefication extends StatefulWidget {
 }
 
 class _CreateGameficationState extends State<CreateGamefication> {
-  // late Future<Map<String, dynamic>> _sandboxResponse;
   late final _sandboxResponse;
   final ConfettiController _controllerBottomCenter =
       ConfettiController(duration: const Duration(seconds: 3));
   bool _isLoading = false;
+  DateTime startapplication = DateTime.now().add(Duration(seconds: 60));
 
+  late bool _response;
   @override
   void initState() {
     super.initState();
@@ -88,7 +88,7 @@ class _CreateGameficationState extends State<CreateGamefication> {
       _isLoading = false;
     });
 
-    if (response.isNotEmpty) {
+    if (response.isNotEmpty && _response) {
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -99,7 +99,6 @@ class _CreateGameficationState extends State<CreateGamefication> {
         ),
       );
     } else {
-      // Handle error if response is empty or not successful
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -128,8 +127,31 @@ class _CreateGameficationState extends State<CreateGamefication> {
           color: Color(0xFF235449),
           child: Center(
             child: _isLoading
-                ? CircularProgressIndicator(
-                    color: Color.fromARGB(255, 230, 151, 6),
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const SizedBox(width: 20.0, height: 100.0),
+                      DefaultTextStyle(
+                        style: const TextStyle(
+                          fontSize: 25.0,
+                          fontFamily: 'Horizon',
+                        ),
+                        child: AnimatedTextKit(
+                          animatedTexts: [
+                            RotateAnimatedText('Creating Application ...'),
+                            RotateAnimatedText('Creating Users ...'),
+                            RotateAnimatedText('Creating Game Action ...'),
+                          ],
+                          isRepeatingAnimation: false,
+                          onTap: () {
+                            print("Tap Event");
+                          },
+                          onNext: (p0, p1) {
+                            _response = p1;
+                          },
+                        ),
+                      ),
+                    ],
                   )
                 : ElevatedButton(
                     child: const Text(

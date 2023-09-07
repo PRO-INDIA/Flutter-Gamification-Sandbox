@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:progamification/progamification.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sandbox_flutter/widgets/create-gamification.dart';
-import '../environment/environment.dart';
+import 'package:tutorial/tutorial.dart';
 import '../screen/rate_review.dart';
 
 class Header extends StatefulWidget {
@@ -14,6 +13,10 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
+  var keyflag = GlobalKey();
+
+  List<TutorialItem> tour = [];
+
   bool _isCardShown = false;
 
   void _toggleCard() {
@@ -23,6 +26,34 @@ class _HeaderState extends State<Header> {
   }
 
   void initState() {
+    tour.addAll({
+      TutorialItem(
+          globalKey: keyflag,
+          touchScreen: true,
+          top: 200,
+          left: 50,
+          children: [
+            Text(
+              "Click here to check out the Leaderboard.",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            SizedBox(
+              height: 100,
+            )
+          ],
+          widgetNext: Text(
+            "Leaderboard is hear",
+            style: TextStyle(
+              color: Colors.purple,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          shapeFocus: ShapeFocus.oval),
+    });
+
+    Future.delayed(Duration(microseconds: 200)).then((value) {
+      Tutorial.showTutorial(context, tour);
+    });
     super.initState();
   }
 
@@ -608,6 +639,7 @@ class _HeaderState extends State<Header> {
               },
             ),
             Padding(
+                key: keyflag,
                 padding: const EdgeInsets.only(left: 8.0),
                 child: LeaderBoard(
                   applicationId: widget.sandboxResponce['applicationId'],
