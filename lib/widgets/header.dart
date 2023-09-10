@@ -639,7 +639,6 @@ class _HeaderState extends State<Header> {
               },
             ),
             Padding(
-                key: keyflag,
                 padding: const EdgeInsets.only(left: 8.0),
                 child: LeaderBoard(
                   applicationId: widget.sandboxResponce['applicationId'],

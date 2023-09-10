@@ -21,9 +21,11 @@ class _CreateGameficationState extends State<CreateGamefication> {
   final ConfettiController _controllerBottomCenter =
       ConfettiController(duration: const Duration(seconds: 3));
   bool _isLoading = false;
+  bool _runAnimation = false;
   DateTime startapplication = DateTime.now().add(Duration(seconds: 60));
 
   late bool _response;
+
   @override
   void initState() {
     super.initState();
@@ -77,6 +79,23 @@ class _CreateGameficationState extends State<CreateGamefication> {
     return {};
   }
 
+  Widget _runAnimationText() {
+    return DefaultTextStyle(
+      style: const TextStyle(
+        fontSize: 25.0,
+        fontFamily: 'Horizon',
+      ),
+      child: AnimatedTextKit(
+        animatedTexts: [
+          RotateAnimatedText('Creating Application ...'),
+          RotateAnimatedText('Creating Users ...'),
+          RotateAnimatedText('Creating Game Action ...'),
+        ],
+        isRepeatingAnimation: false,
+      ),
+    );
+  }
+
   void _exploreDemoButtonPressed() async {
     setState(() {
       _isLoading = true;
@@ -86,18 +105,20 @@ class _CreateGameficationState extends State<CreateGamefication> {
 
     setState(() {
       _isLoading = false;
+      _runAnimation = true;
     });
-
-    if (response.isNotEmpty && _response) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => Layout(
-            title: '',
-            sandboxResponse: response,
+    if (response.isNotEmpty) {
+      Future.delayed(const Duration(seconds: 10), () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Layout(
+              title: '',
+              sandboxResponse: response,
+            ),
           ),
-        ),
-      );
+        );
+      });
     } else {
       showDialog(
         context: context,
@@ -124,51 +145,33 @@ class _CreateGameficationState extends State<CreateGamefication> {
       ),
       home: Scaffold(
         body: Container(
-          color: Color(0xFF235449),
-          child: Center(
-            child: _isLoading
-                ? Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      const SizedBox(width: 20.0, height: 100.0),
-                      DefaultTextStyle(
-                        style: const TextStyle(
-                          fontSize: 25.0,
-                          fontFamily: 'Horizon',
-                        ),
-                        child: AnimatedTextKit(
-                          animatedTexts: [
-                            RotateAnimatedText('Creating Application ...'),
-                            RotateAnimatedText('Creating Users ...'),
-                            RotateAnimatedText('Creating Game Action ...'),
-                          ],
-                          isRepeatingAnimation: false,
-                          onTap: () {
-                            print("Tap Event");
-                          },
-                          onNext: (p0, p1) {
-                            _response = p1;
-                          },
-                        ),
-                      ),
-                    ],
-                  )
-                : ElevatedButton(
-                    child: const Text(
-                      'Explore our Demo',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 230, 151, 6),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 30,
-                        vertical: 15,
-                      ),
-                    ),
-                    onPressed: _exploreDemoButtonPressed,
-                  ),
-          ),
-        ),
+            color: Color(0xFF235449),
+            child: Center(
+                child: _isLoading
+                    ? Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CircularProgressIndicator(
+                            color: Color.fromARGB(255, 230, 151, 6),
+                          )
+                        ],
+                      )
+                    : _runAnimation
+                        ? _runAnimationText()
+                        : ElevatedButton(
+                            child: const Text(
+                              'Explore our Demo',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              primary: Color.fromARGB(255, 230, 151, 6),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 30,
+                                vertical: 15,
+                              ),
+                            ),
+                            onPressed: _exploreDemoButtonPressed,
+                          ))),
       ),
     );
   }
