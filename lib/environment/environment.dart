@@ -1,6 +1,6 @@
 //Constant
 var clientId = "08ce0068-2906-44d4-b840-b268e5511624";
-var clientSecret = "2BG8Q~Vsd33.QQ93jcejZkrr5aVyXvxbl_FrubYg";
+var clientSecret = "CL68Q~D5jO5XEXI8TodHLkha3HG5E83zgZ6KmbZK";
 
 //dynamic from gamification Website
 
