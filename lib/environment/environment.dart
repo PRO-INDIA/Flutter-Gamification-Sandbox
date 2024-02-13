@@ -4,6 +4,6 @@ var clientSecret = "CL68Q~D5jO5XEXI8TodHLkha3HG5E83zgZ6KmbZK";
 
 //dynamic from gamification Website
 
-var userId = "6b40a8ec-6046-4fdf-8a07-9c5f8aba4e8a";
-var applicationId = "64c6645b7cb0ce6020901a4e";
-var gameActionId = "64c6645e7cb0ce6020901a71";
+var userId = "c59c355c-bb89-44d1-87b6-87aa4239c11b";
+var applicationId = "65a76e3376b3472741f939b3";
+var gameActionId = "65a76ee876b3478697f939e3";

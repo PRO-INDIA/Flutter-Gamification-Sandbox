@@ -29,12 +29,17 @@ class Footer extends StatelessWidget {
                     )),
           Container(
             child: Column(children: [
-              Text(
-                " Copyright \u00A9 Peninsular Research Operation 2023. All rights reserved",
-                style: TextStyle(color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Center(
+                  child: Text(
+                    " Copyright \u00A9 Peninsular Research Operation 2023. All rights reserved",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ),
               Text(
-                "Version : 2.0.0",
+                "Version : 2.1.0",
                 style: TextStyle(color: Colors.white),
               ),
             ]),

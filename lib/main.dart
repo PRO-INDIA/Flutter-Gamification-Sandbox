@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:progamification/progamification.dart';
-import 'package:sandbox_flutter/widgets/description.dart';
 import 'package:sandbox_flutter/screen/layout.dart';
 
 import 'environment/environment.dart';
 
-void main() {
-  gamificationService();
-  runApp(const MyApp());
-}
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-gamificationService() async {
   ProgamificationConfig.initialize(
       clientId, clientSecret, userId, applicationId);
   await GamificationService.init();
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

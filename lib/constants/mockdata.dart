@@ -134,7 +134,7 @@ final List<OfferData> offerData = [
     title: 'Grab up to 10% offer',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png?sv=2023-01-03&st=2024-02-13T04%3A26%3A48Z&se=2024-02-14T04%3A26%3A48Z&sr=b&sp=r&sig=0ZpqTEWt%2F7eYJYTsNGhEIJkqBfEq9DDxKyUFW0NJvbg%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(
@@ -147,7 +147,7 @@ final List<OfferData> offerData = [
     title: 'Grab FLAT 8% OFF* on HDFC Credit Card',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2023-01-03&st=2024-02-13T04%3A23%3A32Z&se=2025-06-14T04%3A23%3A00Z&sr=c&sp=rl&sig=BTblNX0HgW4KOpSIhgYH%2BKA72XpHe3oc5mBqxdWFUg8%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(
@@ -160,7 +160,7 @@ final List<OfferData> offerData = [
     title: 'Grab up to 10% offer',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2023-01-03&st=2024-02-13T04%3A23%3A32Z&se=2025-06-14T04%3A23%3A00Z&sr=c&sp=rl&sig=BTblNX0HgW4KOpSIhgYH%2BKA72XpHe3oc5mBqxdWFUg8%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(
@@ -189,7 +189,7 @@ final List<OfferData> offerData1 = [
     title: 'Avail the offers with Rupay Credit Cards',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png?sv=2023-01-03&st=2024-02-13T04%3A23%3A32Z&se=2025-06-14T04%3A23%3A00Z&sr=c&sp=rl&sig=BTblNX0HgW4KOpSIhgYH%2BKA72XpHe3oc5mBqxdWFUg8%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(
@@ -202,7 +202,7 @@ final List<OfferData> offerData1 = [
     title: 'Now get up to 15% OFF* on cabs & buses',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image6.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image6.png?sv=2023-01-03&st=2024-02-13T04%3A23%3A32Z&se=2025-06-14T04%3A23%3A00Z&sr=c&sp=rl&sig=BTblNX0HgW4KOpSIhgYH%2BKA72XpHe3oc5mBqxdWFUg8%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(
@@ -228,7 +228,7 @@ final List<OfferData> offerData1 = [
     title: 'Grab up to 10% offer',
     subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
     imageUrl:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D',
+        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png?sv=2023-01-03&st=2024-02-13T04%3A23%3A32Z&se=2025-06-14T04%3A23%3A00Z&sr=c&sp=rl&sig=BTblNX0HgW4KOpSIhgYH%2BKA72XpHe3oc5mBqxdWFUg8%3D',
     button: TextButton(
       onPressed: () {},
       child: Text(
